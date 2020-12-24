@@ -5,7 +5,7 @@ def solution(s):#이진 변환 반복하기
         delete_zero_count=s.count('0') # 제거할 0의 개수
         sum_delete_zero+=delete_zero_count
         after_zero_length = len(s)-delete_zero_count # 0제거 후 길이
-        s = bin(after_zero_length)[2:] # 이진 변환 결과
+        s = bin(after_zero_length)[2:] # 이진 변환 결과(0b는 제외하고 s에 저장)
         count += 1
     return [count,sum_delete_zero]
 
