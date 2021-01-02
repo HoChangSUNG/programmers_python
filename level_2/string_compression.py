@@ -1,4 +1,4 @@
-def solution(s):
+def solution(s):#문자열 압축
     n = len(s)
     compression_length_array = []
     for split_size in range(1,n // 2 + 2) :
@@ -21,3 +21,5 @@ def solution(s):
             compressed += splited[-1]
         compression_length_array.append(len(compressed))
     return min(compression_length_array)
+
+print(solution("aabbaccc"))
