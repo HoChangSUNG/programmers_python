@@ -1,4 +1,4 @@
-def solution(numbers):
+def solution(numbers): # 가장 큰 수
     numbers=list(map(str,numbers))
     sorted_numbers= sorted(numbers,key = lambda num : num*3,reverse=True)
     sum = 0
