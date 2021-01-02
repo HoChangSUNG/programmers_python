@@ -2,7 +2,7 @@ from collections import deque
 # 1.오름차순 정렬
 # 2.0번째와 마지막번째 인덱스의 값(몸무게)을 비교하여 limit 과 같거나 작으면 보트에 넣는다
 # 3.큐가 빌때까지 시도한다.
-def solution(people, limit):
+def solution(people, limit):#구명보트
     n=limit
     people.sort(reverse=True)
     queue = deque(sorted(people, reverse=True))
