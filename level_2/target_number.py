@@ -1,20 +1,14 @@
-def factorial(n):
-    answer = 1
-    for i in range(2,n+1):
-        answer*=i
+answer = 0
+def target_number(numbers,index,value,target):
+    if index == len(numbers):
+        if value == target :
+            global answer
+            answer += 1
+        return
+    target_number(numbers,index+1,value + numbers[index],target)
+    target_number(numbers, index + 1, value - numbers[index], target)
+def solution(numbers, target): # 타겟넘버
+    target_number(numbers,0,0,target)
+    global answer
     return answer
-def solution(n, k):
-    answer = []
-    nums =[i for i in range(1,n+1)]
-    while nums :
 
-        # print(nums)
-        c=factorial(n-1)
-        # print(c)
-        # print((k // c) * c)
-        first_num = nums.pop(k // c)
-        k -= ((k // c) * c)
-        # print(first_num)
-        answer.append(first_num)
-    print(answer)
-    return answer
