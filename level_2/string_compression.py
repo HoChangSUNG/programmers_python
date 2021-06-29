@@ -22,4 +22,4 @@ def solution(s):#문자열 압축
         compression_length_array.append(len(compressed))
     return min(compression_length_array)
 
-print(solution("aabbaccc"))
+print(solution("a"))
